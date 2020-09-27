@@ -1,0 +1,19 @@
+เช็ค version git
+git --version
+
+การแสดงค่าconfig git
+git config --global --list แสดงคูณสมบัติของ GIT ทั้งหมด Global
+git config --list แสดงคูณสมบัติของ GIT เฉพาะ Repository นั้น
+
+ตั้งค่าconfig git
+git config --global user.name "" กำหนดผู้ใช้
+git config --global user.email ""
+git config --global --list ตรวจสอบอีกครั้ง
+
+สร้าง git repository
+git init 
+
+ตรวจสอบสถานะไฟล์ใน GIT
+git status
+
+
