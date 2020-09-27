@@ -30,6 +30,38 @@ git clean -df ลบ source code ที่อยู่สถานะ untracked
 ประวัติของgit
 git log
 
+reset version git
+git reset --hard commitid7ตัว ลบไปเลย
+git reset --soft commitid7ตัว ลบไปอยู่staged
+git reset --hard commitid7ตัว ลบไปอยู่ก่อน staged
+
+เพิ่ม ลบ แสดงกิ่งของ repository
+git branch แสดง branch ทั้งหมดใน repository
+git branch --all 
+git branch develop สร้าง branch ชื่อ develop
+git branch --delete develop ลบ branch
+
+ย้ายการทำงานไป branch หรือ commitid
+git checkout branchname/commitid
+
+สร้าง branch ชื่อ test และมาทำงานที่ branch นี้
+git checkout -b test
+
+เลือกแค่บางไฟล์จาก branch อื่น มา merge กับ working Directory ที่กำลังทำงาน
+git checkout branchname filename
+
+merge branch master and branch feature แบบ no fast forward
+git merge -no-ff feature จะไม่สนเวอร์ชั่นของfeature จะเอาแค่ล่าสุดมารวมmaster
+
+merge branch master and branch feature แบบ fast forward
+git merge feature 
+
+เปรียบเทียบ branchปัจจุบัน กับ branchอื่่น
+git diff commitid7ตัว/branchname
+
+
+
+
 
 
 
