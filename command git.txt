@@ -16,4 +16,20 @@ git init
 ตรวจสอบสถานะไฟล์ใน GIT
 git status
 
+เพิ่มไฟล์เข้าสู่สถานะ staged
+git add filename 
+git add . ใช้ในการเพิ่มไฟล์ทั้งหมดเข้าไป
+
+เก็บไฟล์ staged เข้าไปใน local repository
+git commit -m "message" ยืนยันการเปลี่ยนแปลงพร้อมข้อความ
+
+แสดงและลบไฟล์ untracked
+git clean -n แสดง source code ที่อยู่สถานะ untracked
+git clean -df ลบ source code ที่อยู่สถานะ untracked
+
+ประวัติของgit
+git log
+
+
+
 
