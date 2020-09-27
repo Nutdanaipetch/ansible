@@ -1,0 +1,23 @@
+[33mcommit f90cb4dd868ae88520717650050bb6c1bdff49a1[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Nutdanai Srirattanakan <Nutdanai.S@dcs.premier.co.th>
+Date:   Sun Sep 27 16:02:37 2020 +0700
+
+    update commandgit
+
+[33mcommit 42a9f386e2d4f3d1b9177812e1c59525ff70a2d0[m
+Author: Nutdanai Srirattanakan <Nutdanai.S@dcs.premier.co.th>
+Date:   Sun Sep 27 16:02:00 2020 +0700
+
+    gitignore
+
+[33mcommit 5bffb615ccef6f75e4b2207227023b41dde9daf1[m
+Author: Nutdanai Srirattanakan <Nutdanai.S@dcs.premier.co.th>
+Date:   Sun Sep 27 14:51:24 2020 +0700
+
+    test
+
+[33mcommit fcd04d61b4c71c67fa4d4eed6a0502d4aa0ea68f[m
+Author: Nutdanai Srirattanakan <Nutdanai.S@dcs.premier.co.th>
+Date:   Sun Sep 27 14:48:02 2020 +0700
+
+    commandgit

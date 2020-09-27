@@ -60,7 +60,25 @@ git merge feature
 git diff commitid7ตัว/branchname
 
 
+คำสั่งติดต่อ remote
+git remote add origin <URL>
+git remote -v แสดง remote repository
 
+push local to remote
+git push origin master ส่งการเปลี่ยนแปลง branch master ไปยัง remote ที่ชื่อ origin
+git push --delete origin master
+
+fetch ดึงไฟล์จาก remote
+git fetch --all ดึงทุกการเปลี่ยนแปลงของทุก branch จาก remote
+git fetch origin master 
+git merge
+git merge origin/master
+
+git pull(fetch+merge)
+git pull <remote> <branch>
+
+git clone:clone remote repository
+git clone <URL>
 
 
 
