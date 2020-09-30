@@ -1,0 +1,23 @@
+---
+- name: 
+  hosts: localhost
+
+  pre_tasks:
+  - name: test debug PRE_task
+    debug:
+      msg: "test debug PRE_task"
+
+
+  tasks:
+  - name: test debug task
+    debug:
+      msg: "test debug task"
+
+- name: TEST rhel7
+  import_playbook: hellorhel7.yml
+
+
+- name: TEST rhel8
+  import_playbook: hellorhel8.yml
+  
+

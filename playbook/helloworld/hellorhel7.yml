@@ -1,0 +1,22 @@
+---
+- name: 
+  hosts: "{{ hnlist }}"
+  serial: 1
+
+  tasks:
+
+  - name: TEST ping
+    ping:
+    when: inventory_hostname in groups['foreman_rhel7']
+
+  - name: TEST MSG
+    debug:
+      msg: "machine: {{ inventory_hostname }} is forman_rhel7 group"
+    when: inventory_hostname in groups['foreman_rhel7']
+
+## This case (import_playbook) delegate_to localhost is not delegate "Tower" ##
+  - name: TEST Delegate
+    debug:
+      msg: "Upgrade patch machine: {{ inventory_hostname }}"
+    delegate_to: tw.hq.example.com
+    when: inventory_hostname in groups['foreman_rhel7'] 

@@ -1,0 +1,20 @@
+---
+- name: call API from Satellite
+  hosts: localhost
+  gather_facts: no
+  vars:
+    satelliteurl: sat.hq.example.com
+    clientenvironment: production
+ 
+  tasks:
+    - name: get Puppet environment from Satellite 
+      uri:
+        url: https://{{ satelliteurl }}/api/v2/hosts/?search=environment={{ clientenvironment }}
+        method: GET 
+        user: admin
+        password: admin
+        force_basic_auth: yes 
+        validate_certs: no
+      register: restdata
+    - name: output rest data
+      debug: msg="{{ restdata.json }}"

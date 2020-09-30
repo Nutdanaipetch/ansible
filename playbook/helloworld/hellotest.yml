@@ -1,0 +1,25 @@
+---
+- name: 
+  hosts: "{{ hnlist }}"
+  #serial: 1
+
+  tasks:
+
+  - name: TEST ping
+    ping:
+    when: inventory_hostname in groups['foreman_rhel7']
+    throttle: 1
+
+  - name: TEST MSG
+    debug:
+      msg: "machine: {{ inventory_hostname }} is forman_rhel7 group"
+    when: inventory_hostname in groups['foreman_rhel7']
+
+  - name: TEST ping
+    ping:
+    when: inventory_hostname in groups['foreman_rhel8']
+
+  - name: TEST MSG
+    debug:
+      msg: "machine: {{ inventory_hostname }} is forman_rhel8 group"
+    when: inventory_hostname in groups['foreman_rhel8']

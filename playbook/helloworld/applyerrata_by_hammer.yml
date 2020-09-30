@@ -1,0 +1,23 @@
+---
+- name: 
+  hosts: sat.hq.example.com
+  vars:
+    hnvar: cap1.hq.example.com
+    cvevar: CVE-2020-10713
+
+  tasks:
+
+  - name: Search Errata ID
+    shell: "hammer --csv host errata list --host {{ hnvar }} --search {{ cvevar }} | grep -vi '^ID' | cut -f 2 -d ,"
+
+    register: errataid
+  - debug:
+      msg: "{{ errataid.stdout }}"
+
+  - name: Apply Errata ID
+    shell: "hammer host errata apply --host {{ hnvar }} --errata-ids {{ errataid.stdout }}"
+    when: errataid.stdout != ""
+
+    register: apply_result
+  - debug:
+      msg: "{{ apply_result.stdout }}"

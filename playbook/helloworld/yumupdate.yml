@@ -1,0 +1,5 @@
+---
+- name: yum update cve
+  hosts: cap1.hq.example.com
+  tasks:
+   - shell: "yum update -y --cve CVE-2020-6463"

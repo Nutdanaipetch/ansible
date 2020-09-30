@@ -1,0 +1,21 @@
+---
+- name: 
+  hosts: localhost
+
+  tasks:
+
+  - name: Apply Errata
+    uri:
+      url: https://sat.hq.example.com/api/v2/hosts/bulk/install_content
+      method: PUT
+      headers: 
+        Content-Type: application/json
+        Accept: application/json,version=2
+      user: admin
+      password: admin
+      body: 
+        {"organization_id":1,"included":{"search":"cap1.hq.example.com"},"content_type":"errata","content":["CVE-2020-10757"]}
+      body_format: json
+      validate_certs: no
+      force_basic_auth: yes
+      status_code: [200,201,202]

@@ -1,0 +1,21 @@
+---
+- name: 
+  hosts: localhost
+
+  tasks:
+
+#  - name: API Satellite
+#    uri:
+#      url: sat.hq.example.co.th
+  - name: CREATE_HC
+    uri:
+      url: "https://sat.hq.example.com/katello/api/host_collections/"
+      user: "admin"
+      password: "admin"
+      method: POST
+      return_content: yes
+      force_basic_auth: yes
+      validate_certs: no
+      body_format: json
+      body: '{"name":"{{hc}}","organization_id":"1"}'
+      status_code: [200,201,202]

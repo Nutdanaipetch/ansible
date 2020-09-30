@@ -1,0 +1,9 @@
+---
+- name: 
+  hosts: all
+
+  tasks:
+
+  - name: Debug Var
+    debug:
+      var: foreman_params
